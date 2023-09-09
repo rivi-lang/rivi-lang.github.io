@@ -33,15 +33,25 @@
           src = ./.;
 
           phases = [ "unpackPhase" "buildPhase" ];
+
+          buildInputs = with pkgs; [
+            pandoc
+          ];
+
           buildPhase = ''
-            cp favicon.svg $out
-            cp robots.txt $out
-            cp *.html $out
+            mkdir -p $out
+
+            cp favicon.svg robots.txt $out
+            pandoc index.md --katex -o $out/index.html
           '';
 
         };
 
-        devenv.shells.default = { };
+        devenv.shells.default = {
+          packages = with pkgs; [
+            pandoc
+          ];
+        };
 
       };
 
