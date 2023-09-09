@@ -41,7 +41,7 @@
           buildPhase = ''
             mkdir -p $out
 
-            cp favicon.svg robots.txt $out
+            cp favicon.svg robots.txt rss.xml $out
             pandoc index.md --katex -o $out/index.html
           '';
 

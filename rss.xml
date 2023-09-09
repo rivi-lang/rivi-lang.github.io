@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Rivi Language</title>
+  <link>https://rivi-lang.org</link>
+  <description>A programming language with built-in distributed scheduler.</description>
+</channel>
+
+</rss>
